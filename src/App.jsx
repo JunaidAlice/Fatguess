@@ -13,7 +13,7 @@ import Rank from "./Pages/Rank";
 import Comments from "./Pages/Coments"; 
 
 import Predictionboard from "./Pages/Predictionboard";
- import LandingPage from "./components/LandingPage";
+ import LandingPage from "./Components/LandingPage";
 import Navbar from './Components/Navbar'
 const App = () => {
   return (
