@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.svg";
+import Connect from '../Pages/Connect'
 
 // Sample crypto data with CoinGecko IDs
 const cryptoData = [
@@ -34,6 +35,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const [isConnected,setConnected]=useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
@@ -84,7 +86,7 @@ export default function Navbar() {
     setIsLanguageDropdownOpen(false);
   };
 
-  return (
+  return (<>
     <nav className="bg-black px-4 py-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
@@ -164,12 +166,13 @@ export default function Navbar() {
           </div>
 
           {/* Connect Wallet */}
-          <Link to="/connect">
-            <button className="bg-[#00A85C] text-white px-4 py-2 rounded-lg">
+        
+            <button onClick={()=>setConnected(true)} className="bg-[#00A85C] text-white px-4 py-2 rounded-lg">
               Connect Wallet
             </button>
-          </Link>
+        
         </div>
+       
 
         {/* Mobile Menu Button */}
         <div className="flex items-center space-x-4 md:hidden">
@@ -186,7 +189,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden mt-4 pb-4 ">
           <div className="relative mb-4">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <Search className="absolute left-3 top-5 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search coin"
@@ -217,7 +220,7 @@ export default function Navbar() {
                   </Link>
                 ))}
               </div>
-            )}
+            )};
           </div>
 
           <div className="space-y-4">
@@ -241,6 +244,9 @@ export default function Navbar() {
                 <span className="font-semibold">Comments</span>
               </button>
             </Link>
+            <button onClick={()=>setConnected(true)} className=" text-gray-400 hover:text-white px-4  rounded-lg">
+              Connect Wallet
+            </button>
             <div className="relative">
               <button
                 onClick={toggleLanguageDropdown}
@@ -283,8 +289,11 @@ export default function Navbar() {
               )}
             </div>
           </div>
+
         </div>
+
       )}
     </nav>
+     <Connect visible={isConnected}/></>
   );
 }

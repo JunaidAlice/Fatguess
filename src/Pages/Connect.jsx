@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Logo from '../assets/navbar/logo.svg';
-import { Link } from "react-router-dom";
+import Signup from '../Pages/Signup'
 
 
-const ConnectWallet = () => {
+const ConnectWallet = ({visible}) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [isConnected, setIsConnected] = useState(false);
+  const [isSignup, setIsSignup]=useState(false)
+  
 
   const handleConnect = () => {
     if (walletAddress) {
@@ -15,10 +17,12 @@ const ConnectWallet = () => {
       alert("Please enter a wallet address.");
     }
   };
+  if (!visible) return null;
 
   return (
-    <section className="bg-[#1F1F1F] h-screen flex flex-col gap-10 items-center justify-center p-4" id="Connect">
-      <div id="Connect">
+    <>
+    <section  className="bg- h-screen flex flex-col gap-10 items-center justify-center p-4 fixed w-full  top-0 backdrop-blur-xl" >
+      <div >
         <img src={Logo} alt="Company Logo" className="w-32" />
       </div>
       <div className="bg-[#040404] rounded-xl p-8 sm:p-10 md:p-16 lg:p-20 max-w-md w-full shadow-lg">
@@ -48,10 +52,15 @@ const ConnectWallet = () => {
           </button>
         </div>
         <p className="text-white text-center text-sm">
-          Don’t have an account? <Link to="/Signup" className="text-[#00A85C] hover:underline">Sign Up</Link>
+          Don’t have an account? <span onClick={()=>setIsSignup(true)} className="text-[#00A85C] hover:underline hover:cursor-pointer">Sign Up</span>
         </p>
       </div>
+
     </section>
+    <Signup visible={isSignup}/>
+    
+    
+    </>
   );
 };
 

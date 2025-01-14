@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo1 from "../assets/Dashboard/bitcoin.png";
 import logo2 from "../assets/Dashboard/eth.png";
 import logo3 from "../assets/Dashboard/xrp.png";
@@ -19,6 +19,7 @@ import share from '../assets/Dashboard/share.svg'
 import uptrendGraph from "../assets/Dashboard/graph1.svg";
 import downtrendGraph from "../assets/Dashboard/graph2.svg";
 import { Link } from "react-router-dom";
+import PredictionCard from "../Pages/Predictionboard";
 
 // Sample Crypto Data
 const cryptoData = [
@@ -145,8 +146,9 @@ const cryptoData = [
 ];
 
 const CryptoGrid = () => {
+  const [isShare,setIsShare]=useState(false)
   return (
-    <div className="p-6 bg-[#1F1F1F] min-h-screen">
+   <> <div className="p-6 bg-[#1F1F1F] min-h-screen">
       <div className="flex space-x-4 mb-6 text-xl font-semibold text-white">
         <Link to="/">
           {" "}
@@ -193,10 +195,10 @@ const CryptoGrid = () => {
               className="  md:h-32 lg:h-44 rounded-lg"
             />
 
-            {/* Predict Button */} <Link to="/Predictionboard">
-            <button className="w-full bg-[#00A67E] text-white font-bold py-2 rounded-lg hover:bg-violet-700 duration-150">
+            {/* Predict Button */}
+            <button onClick={()=>setIsShare(true)} className="w-full bg-[#00A67E] text-white font-bold py-2 rounded-lg hover:bg-violet-700 duration-150">
              Predict Now
-            </button></Link>
+            </button>
 
             {/* Stats */}
             <div className="mt-2 flex justify-between text-gray-400 text-sm">
@@ -211,6 +213,10 @@ const CryptoGrid = () => {
         ))}
       </div>
     </div>
+    <PredictionCard visible={isShare}/>
+    
+    
+    </>
   );
 };
 

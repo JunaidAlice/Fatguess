@@ -1,9 +1,10 @@
 import React from "react";
 
-const Signup = () => {
+const Signup = ({visible}) => {
+  if (!visible) return null;
   return (
-    <div id="signup"
-      className="bg-[#1F1F1F] min-h-screen flex items-center justify-center p-2"
+    <div
+      className=" h-screen fixed top-0 backdrop-blur-3xl w-full flex items-center justify-center p-2"
       
     >
       <div className="bg-black rounded-xl p-8 sm:p-10 md:p-16 lg:p-20 max-w-md w-full">

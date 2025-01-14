@@ -22,9 +22,10 @@ const socialLinks = [
   { icon: telegram , url: "#" },
 ];
 
-export default function PredictionCard() {
+export default function Share({visible}) {
+  if (!visible) return null;
   return (
-    <section className="bg-[#1F1F1F] flex justify-center items-center min-h-screen">
+    <section className="fixed top-0 w-full backdrop-blur-lg  flex justify-center items-center h-screen">
       <div className="bg-[#141414] text-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
         {/* Bitcoin Icon */}
         <div className="flex justify-center mb-4">

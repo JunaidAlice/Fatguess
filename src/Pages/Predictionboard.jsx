@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import bitcoin from '../assets/Dashboard/bitcoin.png'
 import trophy from '../assets/Dashboard/trophy.svg'
-import { Link } from "react-router-dom";
+import Share from '../Pages/Share'
 
-const PredictionCard = () => {
+const PredictionCard = ({visible}) => {
+  if (!visible) return null;
+  const [isPrediction,setIsPrediction]=useState(false)
   const [timeLeft, setTimeLeft] = useState("00:00:00");
   const [prediction, setPrediction] = useState("");
   const [pledge, setPledge] = useState("");
@@ -33,8 +35,8 @@ const PredictionCard = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
-  return (
-    <section className="bg-[#1F1F1F] flex justify-center items-center min-h-screen p-4">
+  return (<>
+    <section className="fixed top-0 backdrop-blur-lg w-full flex justify-center items-center h-screen p-4">
       <div className="bg-[#141414] text-white rounded-lg shadow-lg p-6 max-w-md w-full">
         <h1 className="text-center text-2xl font-bold mb-4">
           Next Draw: <span className="text-[#00A85C]">{timeLeft}</span>
@@ -75,10 +77,10 @@ const PredictionCard = () => {
               className="w-full p-3 rounded  bg-transparent focus:outline-none text-white"
             />
           </div>
-<Link to="/Share">
-          <button className="w-full bg-[#00A85C] hover:bg-[#00A85C] text-white py-3 rounded font-semibold">
+
+          <button onClick={()=>setIsPrediction(true)} className="w-full bg-[#00A85C] hover:bg-[#00A85C] text-white py-3 rounded font-semibold">
             Predict Now
-          </button></Link>
+          </button>
         </div>
 
         <p className="text-xs text-center text-gray-400 mt-4">
@@ -86,6 +88,12 @@ const PredictionCard = () => {
         </p>
       </div>
     </section>
+    <Share visible={isPrediction}/>
+    
+    
+    
+    
+    </>
   );
 };
 
