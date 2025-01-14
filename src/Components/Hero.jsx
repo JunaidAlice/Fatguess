@@ -1,9 +1,11 @@
 import React from 'react';
+import bull from '../assets/Hero/bull.svg'
+
 
 export default function Hero() {
   return (
     <section className="bg-[#1A1A1A]   ">
-      <div className="container md:h-screen mx-auto py-20 flex flex-col md:flex-row md:justify-between items-center text-center md:text-left">
+      <div className="container  mx-auto py-32 flex flex-col md:flex-row md:justify-evenly items-center text-center md:text-left">
         {/* Left Content */}
         <div className="">
           <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-white mb-4">
@@ -15,14 +17,15 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="w-64 h-64 mt-8 md:mt-0 flex justify-center">
+        <div className="w-[276px] h-[491px] mt-8 md:mt-0 flex justify-center">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-13%20164540-nkuk66FJ1X3HD9TpetLMJ5mAHOxkYE.png"
+            src={bull}
             alt="Prediction Pro Mascot"
             className="object-contain w-full h-full"
           />
         </div>
-      </div>
+     
+      </div> <div className='w-[80%] mx-auto border-[1px] rounded-full border-gray-700'></div>
     </section>
   );
 }
