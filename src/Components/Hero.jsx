@@ -1,6 +1,5 @@
-import React from 'react';
-import bull from '../assets/Hero/bull.svg'
-
+import React from "react";
+import bull from "../assets/Hero/bull.svg";
 
 export default function Hero() {
   return (
@@ -24,8 +23,8 @@ export default function Hero() {
             className="object-contain w-full h-full "
           />
         </div>
-     
-      </div> <div className='w-[80%] mx-auto border-[1px] rounded-full border-gray-700'></div>
+      </div>{" "}
+      <div className="w-[80%] mx-auto border-[1px] rounded-full border-gray-700"></div>
     </section>
   );
 }

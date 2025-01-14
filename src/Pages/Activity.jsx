@@ -2,16 +2,96 @@ import React from "react";
 
 // Sample data with avatar image URLs for users
 const activities = [
-  { id: 1, user: "Maria", amount: "$288.29", pair: "BTC/USDT", time: "45 minutes ago", icon: "🔴", avatar: "https://randomuser.me/api/portraits/women/1.jpg" },
-  { id: 2, user: "David", amount: "$288.29", pair: "DOGE", time: "1 hour ago", icon: "🐶", avatar: "https://randomuser.me/api/portraits/men/1.jpg" },
-  { id: 3, user: "David", amount: "$288.29", pair: "DOGE", time: "1 hour ago", icon: "🐶", avatar: "https://randomuser.me/api/portraits/men/1.jpg" },
-  { id: 4, user: "Emma", amount: "$288.29", pair: "BTC/USDT", time: "45 minutes ago", icon: "🟣", avatar: "https://randomuser.me/api/portraits/women/2.jpg" },
-  { id: 5, user: "Emma", amount: "$288.29", pair: "BTC/USDT", time: "45 minutes ago", icon: "🟣", avatar: "https://randomuser.me/api/portraits/women/2.jpg" },
-  { id: 6, user: "David", amount: "$288.29", pair: "DOGE", time: "1 hour ago", icon: "🟠", avatar: "https://randomuser.me/api/portraits/men/2.jpg" },
-  { id: 7, user: "David", amount: "$288.29", pair: "DOGE", time: "1 hour ago", icon: "🟠", avatar: "https://randomuser.me/api/portraits/men/2.jpg" },
-  { id: 8, user: "Emma", amount: "$288.29", pair: "BTC/USDT", time: "45 minutes ago", icon: "🟣", avatar: "https://randomuser.me/api/portraits/women/3.jpg" },
-  { id: 9, user: "Emma", amount: "$288.29", pair: "BTC/USDT", time: "45 minutes ago", icon: "🟣", avatar: "https://randomuser.me/api/portraits/women/3.jpg" },
-  { id: 10, user: "David", amount: "$288.29", pair: "DOGE", time: "1 hour ago", icon: "⚫", avatar: "https://randomuser.me/api/portraits/men/3.jpg" },
+  {
+    id: 1,
+    user: "Maria",
+    amount: "$288.29",
+    pair: "BTC/USDT",
+    time: "45 minutes ago",
+    icon: "🔴",
+    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+  },
+  {
+    id: 2,
+    user: "David",
+    amount: "$288.29",
+    pair: "DOGE",
+    time: "1 hour ago",
+    icon: "🐶",
+    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+  },
+  {
+    id: 3,
+    user: "David",
+    amount: "$288.29",
+    pair: "DOGE",
+    time: "1 hour ago",
+    icon: "🐶",
+    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+  },
+  {
+    id: 4,
+    user: "Emma",
+    amount: "$288.29",
+    pair: "BTC/USDT",
+    time: "45 minutes ago",
+    icon: "🟣",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+  },
+  {
+    id: 5,
+    user: "Emma",
+    amount: "$288.29",
+    pair: "BTC/USDT",
+    time: "45 minutes ago",
+    icon: "🟣",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+  },
+  {
+    id: 6,
+    user: "David",
+    amount: "$288.29",
+    pair: "DOGE",
+    time: "1 hour ago",
+    icon: "🟠",
+    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+  },
+  {
+    id: 7,
+    user: "David",
+    amount: "$288.29",
+    pair: "DOGE",
+    time: "1 hour ago",
+    icon: "🟠",
+    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+  },
+  {
+    id: 8,
+    user: "Emma",
+    amount: "$288.29",
+    pair: "BTC/USDT",
+    time: "45 minutes ago",
+    icon: "🟣",
+    avatar: "https://randomuser.me/api/portraits/women/3.jpg",
+  },
+  {
+    id: 9,
+    user: "Emma",
+    amount: "$288.29",
+    pair: "BTC/USDT",
+    time: "45 minutes ago",
+    icon: "🟣",
+    avatar: "https://randomuser.me/api/portraits/women/3.jpg",
+  },
+  {
+    id: 10,
+    user: "David",
+    amount: "$288.29",
+    pair: "DOGE",
+    time: "1 hour ago",
+    icon: "⚫",
+    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+  },
 ];
 
 const ActivityFeed = () => {
@@ -21,7 +101,10 @@ const ActivityFeed = () => {
         <h2 className="text-3xl font-bold text-center mb-6">ACTIVITY</h2>
         <div className="space-y-4">
           {activities.map((activity) => (
-            <div key={activity.id} className="flex flex-wrap justify-between items-center border-b-[1px] border-b-gray-600 p-4">
+            <div
+              key={activity.id}
+              className="flex flex-wrap justify-between items-center border-b-[1px] border-b-gray-600 p-4"
+            >
               {/* Profile Picture */}
               <div className="flex items-center gap-3">
                 <img

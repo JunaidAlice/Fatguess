@@ -223,10 +223,14 @@ const Comment = ({
           {comment.dislikes}
         </button>
         <button
-          className="text-gray-400 hover:text-white flex items-center gap-1" 
+          className="text-gray-400 hover:text-white flex items-center gap-1"
           onClick={() => setReplyingTo(comment.id)}
-        ><span><LuMessageSquareText /></span>
-          Reply        </button>
+        >
+          <span>
+            <LuMessageSquareText />
+          </span>
+          Reply{" "}
+        </button>
       </div>
 
       {/* Reply input */}
@@ -238,14 +242,15 @@ const Comment = ({
             onChange={(e) => setReplyText(e.target.value)}
             placeholder="Write a reply..."
           ></textarea>
-          <div className=" flex justify-end"> <button
-            className=" px-4 border rounded-md text-white "
-            onClick={() => handleReplySubmit(comment.id)}
-          >
-            Add
-          </button></div>
-         
-         
+          <div className=" flex justify-end">
+            {" "}
+            <button
+              className=" px-4 border rounded-md text-white "
+              onClick={() => handleReplySubmit(comment.id)}
+            >
+              Add
+            </button>
+          </div>
         </div>
       )}
 

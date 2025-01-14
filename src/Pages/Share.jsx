@@ -1,11 +1,11 @@
 import React from "react";
 import CoinLogo from "../assets/Dashboard/bitcoin.png"; // Adjust the path as necessary
-import twitter from '../assets/Share/x.svg'
-import fb from '../assets/Share/fb.svg'
-import tiktok from '../assets/Share/tiktok.svg'
-import discord from '../assets/Share/discord.svg'
-import insta from '../assets/Share/insta.svg'
-import telegram from '../assets/Share/telegram.svg'
+import twitter from "../assets/Share/x.svg";
+import fb from "../assets/Share/fb.svg";
+import tiktok from "../assets/Share/tiktok.svg";
+import discord from "../assets/Share/discord.svg";
+import insta from "../assets/Share/insta.svg";
+import telegram from "../assets/Share/telegram.svg";
 // Static prediction data
 const prediction = {
   price: "$94,978.19",
@@ -19,10 +19,10 @@ const socialLinks = [
   { icon: tiktok, url: "#" },
   { icon: discord, url: "#" },
   { icon: insta, url: "#" },
-  { icon: telegram , url: "#" },
+  { icon: telegram, url: "#" },
 ];
 
-export default function Share({visible}) {
+export default function Share({ visible }) {
   if (!visible) return null;
   return (
     <section className="fixed top-0 w-full backdrop-blur-lg  flex justify-center items-center h-screen">
@@ -41,24 +41,25 @@ export default function Share({visible}) {
         </p>
 
         {/* Predicted Price */}
-        <p className="text-4xl font-bold text-[#00A85C] mb-2">{prediction.price}</p>
+        <p className="text-4xl font-bold text-[#00A85C] mb-2">
+          {prediction.price}
+        </p>
         <p className="text-sm text-gray-400 mb-6">{prediction.date}</p>
         <div className=" py-4 px-4 rounded-md bg-[#00A85C]">
+          {/* Share Button */}
+          <button className=" text-white py-3 rounded font-semibold mb-4">
+            Share your prediction
+          </button>
 
-        {/* Share Button */}
-        <button className=" text-white py-3 rounded font-semibold mb-4">
-          Share your prediction
-        </button>
-
-        {/* Social Media Icons using map() */}
-        <div className="flex justify-center space-x-4 text-2xl text-gray-400">
-          {socialLinks.map((social, index) => (
-            <a key={index} href={social.url} className="hover:text-white">
+          {/* Social Media Icons using map() */}
+          <div className="flex justify-center space-x-4 text-2xl text-gray-400">
+            {socialLinks.map((social, index) => (
+              <a key={index} href={social.url} className="hover:text-white">
                 <img src={social.icon} alt="" />
-            
-            </a>
-          ))}
-        </div></div>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

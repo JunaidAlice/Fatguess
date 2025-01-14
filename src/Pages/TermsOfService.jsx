@@ -92,7 +92,11 @@ const TermsOfService = () => {
         <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
 
         {TERMS_DATA.map((section, index) => (
-          <TermsSection key={index} title={section.title} content={section.content} />
+          <TermsSection
+            key={index}
+            title={section.title}
+            content={section.content}
+          />
         ))}
       </div>
     </section>

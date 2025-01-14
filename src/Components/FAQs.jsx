@@ -156,12 +156,13 @@ const FAQs = () => {
                 >
                   <span className="text-lg font-semibold">{faq.question}</span>
                   <div className="">
-                  {openIndex === index ? (
-                    <IoIosArrowDropdown />
-                  ) : (
-                    <CgAdd className="hover:cursor-pointer " />
-                  )}
-                </div></div>
+                    {openIndex === index ? (
+                      <IoIosArrowDropdown />
+                    ) : (
+                      <CgAdd className="hover:cursor-pointer " />
+                    )}
+                  </div>
+                </div>
                 {openIndex === index && (
                   <div className="faq-answer mt-2 text-gray-200 clear-start font-semibold flex flex-col">
                     {faq.answer1 && (

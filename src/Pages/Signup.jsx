@@ -1,14 +1,11 @@
 import React from "react";
 
-const Signup = ({visible}) => {
+const Signup = ({ visible }) => {
   if (!visible) return null;
   return (
-    <div
-      className=" h-screen fixed top-0 backdrop-blur-3xl w-full flex items-center justify-center p-2"
-      
-    >
+    <div className=" h-screen fixed top-0 backdrop-blur-3xl w-full flex items-center justify-center p-2">
       <div className="bg-black rounded-xl p-8 sm:p-10 md:p-16 lg:p-20 max-w-md w-full">
-        <h1 className="text-center text-white text-2xl font-bold mb-6" >
+        <h1 className="text-center text-white text-2xl font-bold mb-6">
           Sign Up
         </h1>
 

@@ -1,24 +1,73 @@
-import React, { useState } from 'react';
-import avatar1 from '../assets/Leaderboard/img1.png'
-import avatar2 from '../assets/Leaderboard/img2.png'
-import avatar3 from '../assets/Leaderboard/img3.png'
-import avatar4 from '../assets/Leaderboard/img4.png'
-import avatar5 from '../assets/Leaderboard/img5.png'
-import avatar6 from '../assets/Leaderboard/img26.png'
-import avatar7 from '../assets/Leaderboard/img3.png'
+import React, { useState } from "react";
+import avatar1 from "../assets/Leaderboard/img1.png";
+import avatar2 from "../assets/Leaderboard/img2.png";
+import avatar3 from "../assets/Leaderboard/img3.png";
+import avatar4 from "../assets/Leaderboard/img4.png";
+import avatar5 from "../assets/Leaderboard/img5.png";
+import avatar6 from "../assets/Leaderboard/img26.png";
+import avatar7 from "../assets/Leaderboard/img3.png";
 
 const leaderboardData = [
-  { id: 1, name: 'John Doe', amountWon: 23390, wins: 117, avatar: avatar1, notifications: 3 },
-  { id: 2, name: 'Alex Smith', amountWon: 23390, wins: 95, avatar: avatar2, notifications: 1 },
-  { id: 3, name: 'Emily Johnson', amountWon: 23390, wins: 102, avatar: avatar3, notifications: 4 },
-  { id: 4, name: 'Michael Brown', amountWon: 23390, wins: 88, avatar: avatar4, notifications: 2 },
-  { id: 5, name: 'Sarah Davis', amountWon: 23390, wins: 110, avatar: avatar5, notifications: 0 },
-  { id: 6, name: 'David Wilson', amountWon: 23390, wins: 76, avatar: avatar6, notifications: 5 },
-  { id: 7, name: 'Jessica Taylor', amountWon: 23390, wins: 99, avatar: avatar7, notifications: 0 },
+  {
+    id: 1,
+    name: "John Doe",
+    amountWon: 23390,
+    wins: 117,
+    avatar: avatar1,
+    notifications: 3,
+  },
+  {
+    id: 2,
+    name: "Alex Smith",
+    amountWon: 23390,
+    wins: 95,
+    avatar: avatar2,
+    notifications: 1,
+  },
+  {
+    id: 3,
+    name: "Emily Johnson",
+    amountWon: 23390,
+    wins: 102,
+    avatar: avatar3,
+    notifications: 4,
+  },
+  {
+    id: 4,
+    name: "Michael Brown",
+    amountWon: 23390,
+    wins: 88,
+    avatar: avatar4,
+    notifications: 2,
+  },
+  {
+    id: 5,
+    name: "Sarah Davis",
+    amountWon: 23390,
+    wins: 110,
+    avatar: avatar5,
+    notifications: 0,
+  },
+  {
+    id: 6,
+    name: "David Wilson",
+    amountWon: 23390,
+    wins: 76,
+    avatar: avatar6,
+    notifications: 5,
+  },
+  {
+    id: 7,
+    name: "Jessica Taylor",
+    amountWon: 23390,
+    wins: 99,
+    avatar: avatar7,
+    notifications: 0,
+  },
 ];
 
 const Leaderboard = () => {
-  const [filter, setFilter] = useState('Week');
+  const [filter, setFilter] = useState("Week");
 
   return (
     <div className="bg-[#1A1A1A] min-h-screen flex justify-center items-center p-4">
@@ -27,11 +76,13 @@ const Leaderboard = () => {
 
         {/* Filter Buttons */}
         <div className="flex justify-center space-x-2 mb-6 flex-wrap">
-          {['All', 'Day', 'Week', 'Month'].map((option) => (
+          {["All", "Day", "Week", "Month"].map((option) => (
             <button
               key={option}
               className={`px-4 py-2 rounded-full transition-colors mb-2 duration-200 ${
-                filter === option ? 'bg-green-500 text-white' : 'bg-gray-700 hover:bg-gray-600'
+                filter === option
+                  ? "bg-green-500 text-white"
+                  : "bg-gray-700 hover:bg-gray-600"
               }`}
               onClick={() => setFilter(option)}
             >
@@ -43,12 +94,18 @@ const Leaderboard = () => {
         {/* Leaderboard List */}
         <ul className="space-y-4">
           {leaderboardData.map((player) => (
-            <li key={player.id} className="flex items-center p-4 border-b-[1px] border-gray-700 relative flex-wrap sm:flex-nowrap">
-              
+            <li
+              key={player.id}
+              className="flex items-center p-4 border-b-[1px] border-gray-700 relative flex-wrap sm:flex-nowrap"
+            >
               {/* Avatar with Notification Badge */}
               <div className="relative w-16 h-16">
-                <img src={player.avatar} alt={player.name} className="w-12 h-12 rounded-full" />
-                
+                <img
+                  src={player.avatar}
+                  alt={player.name}
+                  className="w-12 h-12 rounded-full"
+                />
+
                 {/* Show Notification Counter only if notifications > 0 */}
                 {player.notifications > 0 && (
                   <span
@@ -63,13 +120,19 @@ const Leaderboard = () => {
               {/* Player Info */}
               <div className="flex-1 ml-4">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                  <span className="block text-lg font-semibold">{player.name}</span>
-                  <span className="text-sm text-gray-400">${player.amountWon.toLocaleString()} won</span>
+                  <span className="block text-lg font-semibold">
+                    {player.name}
+                  </span>
+                  <span className="text-sm text-gray-400">
+                    ${player.amountWon.toLocaleString()} won
+                  </span>
                 </div>
               </div>
 
               {/* Wins (Moves Below on Small Screens) */}
-              <span className="text-lg font-bold text-green-400 ml-2 sm:ml-4">{player.wins} wins</span>
+              <span className="text-lg font-bold text-green-400 ml-2 sm:ml-4">
+                {player.wins} wins
+              </span>
             </li>
           ))}
         </ul>
