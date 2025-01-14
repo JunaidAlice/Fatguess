@@ -11,8 +11,9 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import Activity from "./Pages/Activity";
 import Rank from "./Pages/Rank";
 import Comments from "./Pages/Coments"; 
-import LandingPage from "./components/LandingPage";
-import Predictionboard from "./Pages/Predictionboard"; 
+
+import Predictionboard from "./Pages/Predictionboard";
+ import LandingPage from "./components/LandingPage";
 import Navbar from './Components/Navbar'
 const App = () => {
   return (
