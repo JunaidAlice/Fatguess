@@ -23,10 +23,11 @@ const App = () => {
 };
 const MainContent = () => {
   const location = useLocation();
-   return (
+   return (<>
     <div>
-      <Navbar />
+    <Navbar />
       <Routes>
+          
         <Route path="/" element={<LandingPage />} />
         <Route path="/activity" element={<Activity />} />
         <Route path="/rank" element={<Rank />} />
@@ -35,7 +36,7 @@ const MainContent = () => {
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
-    </div>
+    </div></>
   );
 };
 
