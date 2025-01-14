@@ -115,7 +115,7 @@ const FAQs = () => {
 
   return (
     <div className="bg-[#1F1F1F]" id="faq">
-      <div className="container mx-auto px-10 py-16 flex md:flex-row flex-col text-white">
+      <div className="container mx-auto px-10 py-16 flex md:flex-row flex-col  text-white">
         {/* Header Section */}
         <div>
           <div className="w-[95%] max-w-4xl">
@@ -140,7 +140,7 @@ const FAQs = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="flex min-h-fit mt-8 w-[80%] ">
+        <div className="flex min-h-fit mt-8 w-[80%] mx-auto ">
           {/* Left Side - FAQ List */}
           <div className="flex-1  pt-0 space-y-6">
             {faqs.slice(0, showAll ? faqs.length : 5).map((faq, index) => (
@@ -151,20 +151,20 @@ const FAQs = () => {
                 }`}
               >
                 <div
-                  className="faq-question flex justify-between items-center cursor-pointer"
+                  className="faq-question flex justify-between  items-center cursor-pointer"
                   onClick={() => toggleAnswer(index)}
                 >
                   <span className="text-lg font-semibold">{faq.question}</span>
                   <div className="">
                     {openIndex === index ? (
-                      <IoIosArrowDropdown />
+                      <IoIosArrowDropdown size={25}/>
                     ) : (
-                      <CgAdd className="hover:cursor-pointer " />
+                      <CgAdd size={25}/>
                     )}
                   </div>
                 </div>
                 {openIndex === index && (
-                  <div className="faq-answer mt-2 text-gray-200 clear-start font-semibold flex flex-col">
+                  <div className="faq-answer mt-2 text-gray-200  clear-start font-semibold flex flex-col">
                     {faq.answer1 && (
                       <p>
                         <span className="">.</span> {faq.answer1}
