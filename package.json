@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "daisy": "^0.2.0",
+    "@fontsource/grandstander": "^5.1.2",
+    "daisy": "^0.1.7",
     "daisyui": "^4.12.23",
     "lucide-react": "^0.471.1",
     "react": "^18.3.1",

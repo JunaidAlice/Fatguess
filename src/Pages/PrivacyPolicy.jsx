@@ -52,7 +52,7 @@ const privacyPolicySections = [
 ];
 
 const PrivacyPolicy = () => (
-  <section className="bg-gray-900 text-white min-h-screen py-10 px-4">
+  <section className="bg-[#1F1F1F] text-white min-h-screen py-10 px-4">
     <div className="max-w-4xl mx-auto p-6 rounded-xl">
       <h1 className="text-center text-4xl font-bold mb-8">Privacy Policy</h1>
       {privacyPolicySections.map((section, index) => (

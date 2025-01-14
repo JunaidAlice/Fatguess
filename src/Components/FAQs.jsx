@@ -114,7 +114,7 @@ const FAQs = () => {
   ];
 
   return (
-    <div className="bg-[#1A1A1A]" id="faq">
+    <div className="bg-[#1F1F1F]" id="faq">
       <div className="container mx-auto px-10 py-16 flex md:flex-row flex-col text-white">
         {/* Header Section */}
         <div>

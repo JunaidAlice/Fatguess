@@ -2,12 +2,12 @@ import React from "react";
 
 const Signup = () => {
   return (
-    <section
-      className="bg-[#1F1F1F] h-screen flex items-center justify-center p-2"
-      id="Signup"
+    <div id="signup"
+      className="bg-[#1F1F1F] min-h-screen flex items-center justify-center p-2"
+      
     >
       <div className="bg-black rounded-xl p-8 sm:p-10 md:p-16 lg:p-20 max-w-md w-full">
-        <h1 className="text-center text-white text-2xl font-bold mb-6">
+        <h1 className="text-center text-white text-2xl font-bold mb-6" >
           Sign Up
         </h1>
 
@@ -19,7 +19,7 @@ const Signup = () => {
             type="text"
             id="username"
             placeholder="Username"
-            className="w-full p-2 bg-gray-800 text-white border border-gray-600 rounded"
+            className="w-full p-2  bg-transparent focus:outline-none text-white"
           />
         </div>
 
@@ -33,7 +33,7 @@ const Signup = () => {
           By pledging, I agree to Terms of Use
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

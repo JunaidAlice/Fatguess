@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
+import avatar1 from '../assets/Leaderboard/img1.png'
+import avatar2 from '../assets/Leaderboard/img2.png'
+import avatar3 from '../assets/Leaderboard/img3.png'
+import avatar4 from '../assets/Leaderboard/img4.png'
+import avatar5 from '../assets/Leaderboard/img5.png'
+import avatar6 from '../assets/Leaderboard/img26.png'
+import avatar7 from '../assets/Leaderboard/img3.png'
 
 const leaderboardData = [
-  { id: 1, name: 'John Doe', amountWon: 23390, wins: 117, avatar: 'avatar1.png', notifications: 3 },
-  { id: 2, name: 'Alex Smith', amountWon: 23390, wins: 95, avatar: 'avatar2.png', notifications: 1 },
-  { id: 3, name: 'Emily Johnson', amountWon: 23390, wins: 102, avatar: 'avatar3.png', notifications: 4 },
-  { id: 4, name: 'Michael Brown', amountWon: 23390, wins: 88, avatar: 'avatar4.png', notifications: 2 },
-  { id: 5, name: 'Sarah Davis', amountWon: 23390, wins: 110, avatar: 'avatar5.png', notifications: 0 },
-  { id: 6, name: 'David Wilson', amountWon: 23390, wins: 76, avatar: 'avatar6.png', notifications: 5 },
-  { id: 7, name: 'Jessica Taylor', amountWon: 23390, wins: 99, avatar: 'avatar7.png', notifications: 0 },
+  { id: 1, name: 'John Doe', amountWon: 23390, wins: 117, avatar: avatar1, notifications: 3 },
+  { id: 2, name: 'Alex Smith', amountWon: 23390, wins: 95, avatar: avatar2, notifications: 1 },
+  { id: 3, name: 'Emily Johnson', amountWon: 23390, wins: 102, avatar: avatar3, notifications: 4 },
+  { id: 4, name: 'Michael Brown', amountWon: 23390, wins: 88, avatar: avatar4, notifications: 2 },
+  { id: 5, name: 'Sarah Davis', amountWon: 23390, wins: 110, avatar: avatar5, notifications: 0 },
+  { id: 6, name: 'David Wilson', amountWon: 23390, wins: 76, avatar: avatar6, notifications: 5 },
+  { id: 7, name: 'Jessica Taylor', amountWon: 23390, wins: 99, avatar: avatar7, notifications: 0 },
 ];
 
 const Leaderboard = () => {

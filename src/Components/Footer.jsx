@@ -10,7 +10,7 @@ import Tiktok from '../assets/Footer/Tiktok.svg'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer px-4 md:px-10 border-t-8 border-t-[#00A67E] bg-[#1A1A1A] text-white">
+            <footer className="footer px-4 md:px-10 border-t-8 border-t-[#00A67E] bg-[#1F1F1F] text-white">
                 <div className="flex flex-col md:flex-row justify-between p-4">
                     <img src={Logo} alt="Logo" className="mb-4 md:mb-0" />
                     <div className="flex flex-col md:flex-row gap-4 md:gap-8">

@@ -4,7 +4,7 @@ import bull from '../assets/Hero/bull.svg'
 
 export default function Hero() {
   return (
-    <section className="bg-[#1A1A1A]   ">
+    <section className="bg-[#1F1F1F]   ">
       <div className="container  mx-auto py-32 flex flex-col md:flex-row md:justify-evenly items-center text-center md:text-left">
         {/* Left Content */}
         <div className="">
@@ -21,7 +21,7 @@ export default function Hero() {
           <img
             src={bull}
             alt="Prediction Pro Mascot"
-            className="object-contain w-full h-full"
+            className="object-contain w-full h-full "
           />
         </div>
      
