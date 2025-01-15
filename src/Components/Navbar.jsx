@@ -1,15 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Globe,
-  Search,
-  Trophy,
-  MessageSquare,
-  ChevronDown,
-  Menu,
-  X,
-} from "lucide-react";
+import { Search, ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.svg";
 import Connect from "../Pages/Connect";
@@ -61,11 +53,10 @@ const languages = [
 ];
 
 const navLinks = [
-  { name: "Activity", icon: <Trophy className="w-5 h-5" />, path: "/activity" },
-  { name: "Ranks", icon: <MessageSquare className="w-5 h-5" />, path: "/rank" },
+  { name: "Activity", path: "/activity" },
+  { name: "Ranks", path: "/rank" },
   {
     name: "Comments",
-    icon: <MessageSquare className="w-5 h-5" />,
     path: "/comments",
   },
 ];
