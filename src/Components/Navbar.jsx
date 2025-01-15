@@ -241,7 +241,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4 md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2 hover:bg-gray-800 rounded-lg"
+              className="text-white p-2 hover:bg-[#040404] rounded-lg"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
