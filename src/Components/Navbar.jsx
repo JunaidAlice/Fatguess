@@ -167,7 +167,7 @@ export default function Navbar() {
               <Link key={link.name} to={link.path}>
                 <button className="flex flex-col items-center text-gray-400 hover:text-white">
                   {link.icon}
-                  <span className="text-xs mt-1 font-semibold">
+                  <span className="  text-lg mt-1 font-semibold ">
                     {link.name}
                   </span>
                 </button>
@@ -276,7 +276,7 @@ export default function Navbar() {
               <Link to="/activity">
                 <button className="flex items-center space-x-3 text-gray-400 hover:text-white w-full px-2 py-2 rounded-lg hover:bg-[#1f1f1f]">
                   <Trophy className="w-5 h-5" />
-                  <span className="font-semibold text-lg">Activity</span>
+                  <span className="font-semibold">Activity</span>
                 </button>
               </Link>
               <Link to="/rank">
@@ -290,7 +290,7 @@ export default function Navbar() {
                   >
                     <path d="M2 20h20M5 20V8m7 12V4m7 16v-8" />
                   </svg>
-                  <span className="font-semibold">Ranks</span>
+                  <span className="font-semibold ">Ranks</span>
                 </button>
               </Link>
               <Link to="/comments">
