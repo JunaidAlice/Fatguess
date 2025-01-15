@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Search, ChevronDown, Menu, X } from "lucide-react";
+import { Search,Trophy,MessageSquare, ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.svg";
 import Connect from "../Pages/Connect";
