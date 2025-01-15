@@ -122,8 +122,8 @@ export default function Navbar() {
           </div>
 
           {/* Search Bar */}
-          <div className="hidden md:flex items-center flex-1 max-w-md mr-20 relative">
-            <div className="relative w-full">
+          <div className="hidden md:flex items-center flex-1 max-w-md md:mr-3 lg:mr-20 relative">
+            <div className="relative w-full ml-4">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
