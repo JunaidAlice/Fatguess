@@ -276,7 +276,7 @@ export default function Navbar() {
               <Link to="/activity">
                 <button className="flex items-center space-x-3 text-gray-400 hover:text-white w-full px-2 py-2 rounded-lg hover:bg-[#1f1f1f]">
                   <Trophy className="w-5 h-5" />
-                  <span className="font-semibold">Activity</span>
+                  <span className="font-semibold text-lg">Activity</span>
                 </button>
               </Link>
               <Link to="/rank">
