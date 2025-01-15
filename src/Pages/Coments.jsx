@@ -188,12 +188,12 @@ const Comment = ({
   replyText,
   setReplyText,
 }) => (
-  <div className="mb-4 p-4 flex space-x-4">
+  <div className="mb-4 p-4 pl-0 flex space-x-4 ">
     {/* Profile Picture */}
     <img
       src={comment.avatar}
       alt="User Avatar"
-      className="w-10 h-10 rounded-full"
+      className="w-8 h-8 rounded-full"
     />
 
     <div className="flex-1">
@@ -204,9 +204,9 @@ const Comment = ({
       <p className="mt-2">{comment.text}</p>
 
       {/* Like and Dislike buttons */}
-      <div className="flex gap-4 mt-2">
+      <div className="flex gap-4 mt-2 ">
         <button
-          className="text-gray-400 hover:text-white flex items-center gap-1"
+          className="text-gray-400 hover:text-white flex items-center md:gap-1 gap-1"
           onClick={() => handleLike(comment.id)}
         >
           {" "}
@@ -216,14 +216,14 @@ const Comment = ({
           {comment.likes}
         </button>
         <button
-          className="text-gray-400 hover:text-white flex items-center gap-1"
+          className="text-gray-400 hover:text-white flex items-center md:gap-1 gap-0  "
           onClick={() => handleDislike(comment.id)}
         >
           <BiDislike />
           {comment.dislikes}
         </button>
         <button
-          className="text-gray-400 hover:text-white flex items-center gap-1"
+          className="text-gray-400 hover:text-white flex items-center md:gap-1 gap-0"
           onClick={() => setReplyingTo(comment.id)}
         >
           <span>
@@ -235,9 +235,9 @@ const Comment = ({
 
       {/* Reply input */}
       {replyingTo === comment.id && (
-        <div className="mt-2  rounded-md p-2">
+        <div className="mt-2  rounded-md border">
           <textarea
-            className="w-full  bg-transparent text-white focus:outline-none border-b-[1px]"
+            className="w-full border  bg-transparent text-white focus:outline-none border-b-[1px]"
             value={replyText}
             onChange={(e) => setReplyText(e.target.value)}
             placeholder="Write a reply..."
@@ -256,7 +256,7 @@ const Comment = ({
 
       {/* Display Replies */}
       {comment.replies.length > 0 && (
-        <div className=" mt-2 mr-4 border">
+        <div className=" mt-2">
           {comment.replies.map((reply) => (
             <Comment
               key={reply.id}
