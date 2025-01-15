@@ -1,10 +1,18 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Search,Trophy,MessageSquare, ChevronDown, Menu, X } from "lucide-react";
+import {
+  Search,
+  Trophy,
+  MessageSquare,
+  ChevronDown,
+  Menu,
+  X,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.svg";
 import Connect from "../Pages/Connect";
+import empty from "../assets/Navbar/telescope.svg";
 
 // Sample crypto data with CoinGecko IDs
 const cryptoData = [
@@ -62,7 +70,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [isConnected, setConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
@@ -103,6 +111,7 @@ export default function Navbar() {
         : []
     );
   };
+  const close = () => setIsConnected(false);
 
   const toggleLanguageDropdown = () => {
     setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
@@ -115,7 +124,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-black px-4 py-6">
+      <nav className="bg-[#141414] px-4 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img src={Logo} alt="Logo" />
@@ -128,12 +137,12 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search coin"
-                className="w-full bg-black text-white pl-10 pr-4 py-2 rounded-lg focus:outline-none border-[1px] border-gray-800"
+                className="w-full md:w-[65%] bg-[#040404] text-white pl-10 pr-4 py-2 rounded-lg focus:outline-none border-[1px] border-gray-800"
                 value={searchQuery}
                 onChange={handleSearch}
               />
-              {filteredResults.length > 0 && (
-                <div className="absolute top-12 left-0 w-full text-white p-2 bg-[#141414]">
+              {filteredResults.length > 0 ? (
+                <div className="absolute top-12 left-0 w-full md:w-[65%] text-white p-2 bg-[#141414]">
                   {filteredResults.map((crypto) => (
                     <Link
                       key={crypto.symbol}
@@ -157,6 +166,15 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </div>
+              ) : (
+                searchQuery && (
+                  <div className="absolute top-12 left-0 w-full md:w-[65%] rounded-md text-white p-2 bg-[#040404]">
+                    <img src={empty} alt="empty" className="w-14 mx-auto" />
+                    <p className="text-center">
+                      Sorry, coin not supported yet...
+                    </p>
+                  </div>
+                )
               )}
             </div>
           </div>
@@ -178,14 +196,14 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={toggleLanguageDropdown}
-                className="flex items-center space-x-1 text-white"
+                className="flex items-center space-x-1 rounded-md bg-[#040404] px-2 py-2 text-white"
               >
                 <img
                   src={selectedLanguage.flag}
                   alt="Lang Flag"
-                  className="w-5 h-5 rounded-full"
+                  className="w-5 h-5 rounded-full border"
                 />
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4 " />
               </button>
 
               {isLanguageDropdownOpen && (
@@ -211,7 +229,7 @@ export default function Navbar() {
             {/* Connect Wallet */}
 
             <button
-              onClick={() => setConnected(true)}
+              onClick={() => setIsConnected(true)}
               className="bg-[#00A85C] text-white px-4 py-2 rounded-lg"
             >
               Connect Wallet
@@ -239,7 +257,7 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Search coin"
-                className="w-full text-white pl-10 pr-4 py-2 rounded-lg bg-black focus:outline-none border-[1px] border-gray-800 "
+                className="w-full text-white pl-10 pr-4 py-2 rounded-lg bg-[#040404] focus:outline-none border-[1px] border-gray-800 "
                 value={searchQuery}
                 onChange={handleSearch}
               />
@@ -269,7 +287,6 @@ export default function Navbar() {
                   ))}
                 </div>
               )}
-              ;
             </div>
 
             <div className="space-y-4">
@@ -300,8 +317,8 @@ export default function Navbar() {
                 </button>
               </Link>
               <button
-                onClick={() => setConnected(true)}
-                className=" text-gray-400 hover:text-white px-4  rounded-lg"
+                onClick={() => setIsConnected(true)}
+                className=" text-gray-400  hover:text-white px-4  rounded-lg"
               >
                 Connect Wallet
               </button>
@@ -310,7 +327,7 @@ export default function Navbar() {
                   onClick={toggleLanguageDropdown}
                   className="flex items-center justify-between text-white w-full px-2 py-2 rounded-lg hover:bg-[#1f1f1f]"
                 >
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3 ">
                     <img
                       src={selectedLanguage.flag}
                       alt={`${selectedLanguage.name} Flag`}
@@ -355,7 +372,7 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-      <Connect visible={isConnected} />
+      {isConnected && <Connect close={close} />}
     </>
   );
 }

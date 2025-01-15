@@ -110,6 +110,7 @@ const CommentsSection = () => {
                   ? { ...reply, replies: [...reply.replies, newReply] }
                   : reply
               ),
+
             }
       )
     );
@@ -159,7 +160,7 @@ const CommentsSection = () => {
 
         <div>
           {comments.map((comment) => (
-            <Comment
+            <Comment   
               key={comment.id}
               comment={comment}
               handleLike={handleLike}
@@ -235,9 +236,9 @@ const Comment = ({
 
       {/* Reply input */}
       {replyingTo === comment.id && (
-        <div className="mt-2  rounded-md border">
+        <div className="mt-2  rounded-md ">
           <textarea
-            className="w-full border  bg-transparent text-white focus:outline-none border-b-[1px]"
+            className="w-full bg-transparent text-white focus:outline-none border-b-[1px]"
             value={replyText}
             onChange={(e) => setReplyText(e.target.value)}
             placeholder="Write a reply..."

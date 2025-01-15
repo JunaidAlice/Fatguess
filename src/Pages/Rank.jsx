@@ -7,138 +7,75 @@ import avatar5 from "../assets/Leaderboard/img5.png";
 import avatar6 from "../assets/Leaderboard/img26.png";
 import avatar7 from "../assets/Leaderboard/img3.png";
 
-const leaderboardData = [
-  {
-    id: 1,
-    name: "John Doe",
-    amountWon: 23390,
-    wins: 117,
-    avatar: avatar1,
-    notifications: 3,
-  },
-  {
-    id: 2,
-    name: "Alex Smith",
-    amountWon: 23390,
-    wins: 95,
-    avatar: avatar2,
-    notifications: 1,
-  },
-  {
-    id: 3,
-    name: "Emily Johnson",
-    amountWon: 23390,
-    wins: 102,
-    avatar: avatar3,
-    notifications: 4,
-  },
-  {
-    id: 4,
-    name: "Michael Brown",
-    amountWon: 23390,
-    wins: 88,
-    avatar: avatar4,
-    notifications: 2,
-  },
-  {
-    id: 5,
-    name: "Sarah Davis",
-    amountWon: 23390,
-    wins: 110,
-    avatar: avatar5,
-    notifications: 0,
-  },
-  {
-    id: 6,
-    name: "David Wilson",
-    amountWon: 23390,
-    wins: 76,
-    avatar: avatar6,
-    notifications: 5,
-  },
-  {
-    id: 7,
-    name: "Jessica Taylor",
-    amountWon: 23390,
-    wins: 99,
-    avatar: avatar7,
-    notifications: 0,
-  },
+const rankData = [
+  { id: 1, name: "John Doe", amountWon: 23390, wins: 117, avatar: avatar1, notifications: 3, category: "all" },
+  { id: 2, name: "Alex Smith", amountWon: 19000, wins: 95, avatar: avatar2, notifications: 1, category: "day" },
+  { id: 3, name: "Emily Johnson", amountWon: 21000, wins: 102, avatar: avatar3, notifications: 4, category: "week" },
+  { id: 4, name: "Michael Brown", amountWon: 15000, wins: 88, avatar: avatar4, notifications: 2, category: "month" },
+  { id: 5, name: "Sarah Davis", amountWon: 22000, wins: 110, avatar: avatar5, notifications: 0, category: "all" },
+  { id: 6, name: "David Wilson", amountWon: 13000, wins: 76, avatar: avatar6, notifications: 5, category: "week" },
+  { id: 7, name: "Jessica Taylor", amountWon: 17500, wins: 99, avatar: avatar7, notifications: 0, category: "day" },
 ];
 
-const Leaderboard = () => {
-  const [filter, setFilter] = useState("Week");
+const Rank = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // Filter leaderboard data based on selected category
+  const filteredRankData =
+    selectedCategory === "all"
+      ? rankData
+      : rankData.filter((player) => player.category === selectedCategory);
 
   return (
-    <div className="bg-[#1A1A1A] min-h-screen flex justify-center items-center p-4">
+    <div className="bg-[#1A1A1A] min-h-screen flex justify-center items-center py-6">
       <div className="text-white p-6 rounded-lg w-full max-w-4xl">
-        <h2 className="text-3xl font-bold text-center mb-6">LEADERBOARD</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">RANK</h2>
 
         {/* Filter Buttons */}
-        <div className="flex justify-center space-x-2 mb-6 flex-wrap">
-          {["All", "Day", "Week", "Month"].map((option) => (
+        <div className="flex justify-center space-x-2 mb-6 flex-wrap gap-3">
+          {["all", "day", "week", "month"].map((option) => (
             <button
               key={option}
-              className={`px-4 py-2 rounded-full transition-colors mb-2 duration-200 ${
-                filter === option
-                  ? "bg-green-500 text-white"
-                  : "bg-gray-700 hover:bg-gray-600"
-              }`}
-              onClick={() => setFilter(option)}
+              className={`px-4 py-2 rounded-full ${
+                selectedCategory === option ? "bg-[#00A85C]" : "bg-gray-700 hover:bg-gray-600"
+              } text-white transition duration-200 w-full sm:w-auto`}
+              onClick={() => setSelectedCategory(option)}
             >
-              {option}
+              {option.charAt(0).toUpperCase() + option.slice(1)}
             </button>
           ))}
         </div>
 
-        {/* Leaderboard List */}
-        <ul className="space-y-4">
-          {leaderboardData.map((player) => (
-            <li
-              key={player.id}
-              className="flex items-center p-4 border-b-[1px] border-gray-700 relative flex-wrap sm:flex-nowrap"
-            >
-              {/* Avatar with Notification Badge */}
-              <div className="relative w-16 h-16">
-                <img
-                  src={player.avatar}
-                  alt={player.name}
-                  className="w-12 h-12 rounded-full"
-                />
-
-                {/* Show Notification Counter only if notifications > 0 */}
-                {player.notifications > 0 && (
-                  <span
-                    className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#1A1A1A] 
-                    animate-pulse transform transition duration-500 ease-out"
-                  >
-                    {player.notifications}
-                  </span>
-                )}
-              </div>
-
-              {/* Player Info */}
-              <div className="flex-1 ml-4">
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                  <span className="block text-lg font-semibold">
-                    {player.name}
-                  </span>
-                  <span className="text-sm text-gray-400">
-                    ${player.amountWon.toLocaleString()} won
-                  </span>
+        {/* Rank List (Filtered) */}
+        <ul className="space-y-4 min-h-screen">
+          {filteredRankData.length > 0 ? (
+            filteredRankData.map((player) => (
+              <li
+                key={player.id}
+                className="flex flex-wrap sm:flex-nowrap items-center p-4 border-b-[1px] border-gray-700 relative"
+              >
+                <div className="relative w-16 h-16 flex-shrink-0">
+                  <img src={player.avatar} alt={player.name} className="w-12 h-12 rounded-full" />
+                  {player.notifications > 0 && (
+                    <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-[#1A1A1A] animate-pulse">
+                      {player.notifications}
+                    </span>
+                  )}
                 </div>
-              </div>
-
-              {/* Wins (Moves Below on Small Screens) */}
-              <span className="text-lg font-bold text-green-400 ml-2 sm:ml-4">
-                {player.wins} wins
-              </span>
-            </li>
-          ))}
+                <div className="flex-1 ml-4 text-center sm:text-left">
+                  <span className="block text-lg font-semibold">{player.name}</span>
+                  <span className="text-sm text-gray-400">${player.amountWon.toLocaleString()} won</span>
+                </div>
+                <span className="text-lg font-bold text-[#00A85C] ml-2 sm:ml-4">{player.wins} wins</span>
+              </li>
+            ))
+          ) : (
+            <p className="text-center text-gray-400">No data available for {selectedCategory}</p>
+          )}
         </ul>
       </div>
     </div>
   );
 };
 
-export default Leaderboard;
+export default Rank;
