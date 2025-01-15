@@ -1,6 +1,6 @@
 import React from "react";
 import CoinLogo from "../assets/Dashboard/bitcoin.png"; // Adjust the path as necessary
-import twitter from "../assets/Share/x.svg";
+import twitter from "../assets/Share/X.svg";
 import fb from "../assets/Share/fb.svg";
 import tiktok from "../assets/Share/tiktok.svg";
 import discord from "../assets/Share/discord.svg";
