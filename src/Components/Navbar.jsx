@@ -261,7 +261,7 @@ export default function Navbar() {
                 value={searchQuery}
                 onChange={handleSearch}
               />
-              {filteredResults.length > 0 && (
+              {filteredResults.length > 0 ? (
                 <div className="absolute top-12 left-0 w-full text-white p-2 bg-[#141414]">
                   {filteredResults.map((crypto) => (
                     <Link
@@ -286,6 +286,14 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </div>
+              ):
+                searchQuery && (
+                  <div className="absolute top-12 left-0 w-full md:w-[65%] rounded-md text-white p-2 bg-[#040404]">
+                    <img src={empty} alt="empty" className="w-14 mx-auto" />
+                    <p className="text-center">
+                      Sorry, coin not supported yet...
+                    </p>
+                  </div>
               )}
             </div>
 
