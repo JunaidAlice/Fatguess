@@ -169,7 +169,7 @@ export default function Navbar() {
                 </div>
               ) : (
                 searchQuery && (
-                  <div className="absolute top-12 left-0 w-full md:w-[65%] rounded-md text-white p-2 bg-[#040404]">
+                  <div className="absolute top-12 left-0 w-full  md:w-[65%] rounded-md text-white p-2 bg-[#040404]">
                     <img src={empty} alt="empty" className="w-14 mx-auto" />
                     <p className="text-center">
                       Sorry, coin not supported yet...
@@ -181,12 +181,12 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-3">
             {navLinks.map((link) => (
               <Link key={link.name} to={link.path}>
                 <button className="flex flex-col items-center text-gray-400 hover:text-white">
                   {link.icon}
-                  <span className="  text-lg mt-1 font-semibold ">
+                  <span className="  md:text-lg text-base mt-1 font-semibold ">
                     {link.name}
                   </span>
                 </button>
