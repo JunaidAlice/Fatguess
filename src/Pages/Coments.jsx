@@ -256,7 +256,7 @@ const Comment = ({
 
       {/* Display Replies */}
       {comment.replies.length > 0 && (
-        <div className=" mt-2">
+        <div className=" mt-2 mr-4">
           {comment.replies.map((reply) => (
             <Comment
               key={reply.id}
