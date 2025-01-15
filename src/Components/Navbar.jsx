@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar/Logo.svg";
 import Connect from "../Pages/Connect";
 import empty from "../assets/Navbar/telescope.svg";
+import { BiWallet } from "react-icons/bi";
 
 // Sample crypto data with CoinGecko IDs
 const cryptoData = [
@@ -326,8 +327,9 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setIsConnected(true)}
-                className=" text-gray-400  hover:text-white px-4  rounded-lg"
+                className=" text-gray-400  hover:text-white pr-4 pl-2 gap-3  rounded-lg flex items-center font-bold"
               >
+               <BiWallet size={22}/>
                 Connect Wallet
               </button>
               <div className="relative">
