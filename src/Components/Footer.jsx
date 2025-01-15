@@ -4,7 +4,7 @@ import Logo from "../assets/Navbar/Logo.svg";
 import X from "../assets/Footer/X.svg";
 import Telegram from "../assets/Footer/Telegram.svg";
 import insta from "../assets/Footer/insta.svg";
-import Discord from "../assets/Footer/Discord.svg";
+import Discord from "../assets/Footer/discord.svg";
 import Tiktok from "../assets/Footer/Tiktok.svg";
 
 const Footer = () => {
