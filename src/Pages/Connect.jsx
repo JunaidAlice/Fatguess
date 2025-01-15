@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/Navbar/logo.svg";
+import Logo from "../assets/Navbar/Logo.svg";
 import Signup from "../Pages/Signup";
 
 const ConnectWallet = ({ visible }) => {
