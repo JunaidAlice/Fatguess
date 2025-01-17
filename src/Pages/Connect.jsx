@@ -15,7 +15,7 @@ const ConnectWallet = ({ close }) => {
         </div>
         <div className="bg-[#040404] rounded-xl p-8 sm:p-10 md:p-16 lg:p-20 max-w-md w-full shadow-lg ">
           <Link to="/Dashboard">
-            <button className="text-center text-2xl font-bold mb-6">
+            <button className="text-center text-2xl font-bold mb-6 ">
               Connect Wallet
             </button>
           </Link>
@@ -39,7 +39,7 @@ const ConnectWallet = ({ close }) => {
             <Link to="/Dashboard">
               <button
                 onClick={close}
-                className="w-full bg-[#00A85C] hover:bg-green-700  text-white font-semibold rounded-md p-3 transition duration-300"
+                className="w-full bg-[#00A67E]  hover:bg-violet-500 duration-200 text-white font-semibold rounded-md p-3 transition "
               >
                 Connect Wallet
               </button>
@@ -49,7 +49,7 @@ const ConnectWallet = ({ close }) => {
             Don’t have an account?{" "}
             <span
               onClick={() => setIsSignup(true)}
-              className="text-[#00A85C] hover:underline hover:cursor-pointer"
+              className="text-[#00A67E] hover:underline hover:cursor-pointer "
             >
               Sign Up
             </span>

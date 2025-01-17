@@ -192,7 +192,7 @@ const FAQs = () => {
             {!showAll && (
               <div className="flex justify-center">
                 <button
-                  className="mt-4 bg-[#00A67E] text-white px-10 py-2 w-fit rounded-md"
+                  className="mt-4 bg-[#00A67E] hover:bg-violet-500 duration-200 text-white px-10 py-2 w-fit rounded-md"
                   onClick={() => setShowAll(true)}
                 >
                   View More

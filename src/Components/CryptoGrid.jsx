@@ -42,13 +42,13 @@ const CryptoGrid = () => {
         {/* Navigation Tabs */}
         <div className="flex space-x-4 mb-6 text-xl font-semibold text-white">
           <button 
-            className={`hover:text-green-400 hover:border-b-2 hover:border-green-400 cursor-pointer ${selectedCategory === "mega" ? "text-green-400 border-b-2 border-green-400" : ""}`} 
+            className={`text-[#00A67E] hover:border-b-2 hover:border-[#00A67E] cursor-pointer ${selectedCategory === "mega" ? "text-green-400 border-b-2 hover:border-[#00A67E] " : ""}`} 
             onClick={() => setSelectedCategory("mega")}
           >
             Mega Coins
           </button>
           <button 
-            className={`hover:text-green-400 hover:border-b-2 hover:border-green-400 cursor-pointer ${selectedCategory === "meme" ? "text-green-400 border-b-2 border-green-400" : ""}`} 
+            className={`text-[#00A67E] hover:border-b-2 hover:border-[#00A67E] cursor-pointer ${selectedCategory === "meme" ? "text-green-400 border-b-2 hover:border-[#00A67E] " : ""}`} 
             onClick={() => setSelectedCategory("meme")}
           >
             Meme Coins
@@ -83,7 +83,7 @@ const CryptoGrid = () => {
                   {/* Predict Button */}
                   <button
                     onClick={() => setIsShare(true)}
-                    className="w-full bg-[#00A67E] text-white font-bold py-2 rounded-lg hover:bg-violet-700 duration-150"
+                    className="w-full bg-[#00A67E] text-white font-bold py-2 rounded-lg hover:bg-violet-500 duration-200"
                   >
                     Predict Now
                   </button>

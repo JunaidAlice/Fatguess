@@ -41,11 +41,11 @@ export default function Share({ visible }) {
         </p>
 
         {/* Predicted Price */}
-        <p className="text-4xl font-bold text-[#00A85C] mb-2">
+        <p className="text-4xl font-bold text-[#00A67E] mb-2">
           {prediction.price}
         </p>
         <p className="text-sm text-gray-400 mb-6">{prediction.date}</p>
-        <div className=" py-4 px-4 rounded-md bg-[#00A85C]">
+        <div className=" py-4 px-4 rounded-md bg-[#00A67E] hover:bg-violet-500 duration-200">
           {/* Share Button */}
           <button className=" text-white py-3 rounded font-semibold mb-4">
             Share your prediction

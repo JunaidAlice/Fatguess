@@ -46,7 +46,7 @@ const PredictionCard = ({ visible }) => {
       <section className="fixed top-0 backdrop-blur-lg w-full flex justify-center items-center h-screen p-4">
         <div className="bg-[#141414] text-white rounded-lg shadow-lg p-6 max-w-md w-full">
           <h1 className="text-center text-2xl font-bold mb-4">
-            Next Draw: <span className="text-[#00A85C]">{timeLeft}</span>
+            Next Draw: <span className="text-[#00A67E]">{timeLeft}</span>
           </h1>
           <div className="text-center text-lg font-medium mb-6">
             <div className="w-44 flex justify-center items-center mx-auto">
@@ -103,7 +103,7 @@ const PredictionCard = ({ visible }) => {
 
             <button
               onClick={() => setIsPrediction(true)}
-              className="w-full bg-[#00A85C] hover:bg-[#00A85C] text-white py-3 rounded font-semibold"
+              className="w-full bg-[#00A85C]  hover:bg-violet-500 duration-200 text-white py-3 rounded font-semibold"
             >
               Predict Now
             </button>

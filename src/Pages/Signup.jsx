@@ -22,7 +22,7 @@ const Signup = ({ visible }) => {
         </div>
 
         <div className="flex items-center justify-center mb-4">
-          <button className="bg-[#00A85C] text-white rounded-md p-2 w-full">
+          <button className="bg-[#00A67E] hover:bg-violet-500 duration-200 text-white rounded-md p-2 w-full">
             Sign Up
           </button>
         </div>

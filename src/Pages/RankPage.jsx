@@ -17,7 +17,7 @@ const RankPage = () => {
       </p>
 
       <Link to="/rank">
-        <button className="px-6 py-3 bg-green-500 hover:bg-green-700 text-white rounded-md transition duration-200 w-full max-w-[250px]">
+        <button className="px-6 py-3 bg-[#00A67E] hover:bg-violet-500  text-white rounded-md transition duration-200 w-full max-w-[250px]">
           Back to Rank
         </button>
       </Link>

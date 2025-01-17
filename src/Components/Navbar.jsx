@@ -133,17 +133,17 @@ export default function Navbar() {
 
           {/* Search Bar */}
           <div className="hidden md:flex items-center flex-1 max-w-md md:mr-3 lg:mr-20 relative">
-            <div className="relative w-full ml-4">
+            <div className="relative w-full lg:ml-0 ml-4">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
                 placeholder="Search coin"
-                className="w-full md:w-[65%] bg-[#040404] text-white pl-10 pr-4 py-2 rounded-lg focus:outline-none border-[1px] border-gray-800"
+                className="w-full md:w-[65%] bg-[#040404] text-white pl-10 pr-4 lg:pr-0 py-2 rounded-lg focus:outline-none border-[1px] border-gray-800"
                 value={searchQuery}
                 onChange={handleSearch}
               />
               {filteredResults.length > 0 ? (
-                <div className="absolute top-12 left-0 w-full md:w-[65%] text-white p-2 bg-[#141414]">
+                <div className="absolute top-12 left-0 w-full md:w-[65%]  text-white p-2 bg-[#141414]">
                   {filteredResults.map((crypto) => (
                     <Link
                       key={crypto.symbol}
@@ -231,7 +231,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsConnected(true)}
-              className="bg-[#00A85C] text-white px-4 py-2 rounded-lg"
+              className="bg-[#00A67E] text-white px-4 py-2 rounded-lg hover:bg-violet-500 duration-200"
             >
               Connect Wallet
             </button>

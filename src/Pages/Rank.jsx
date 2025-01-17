@@ -37,7 +37,7 @@ const Rank = () => {
             <button
               key={option}
               className={`px-4 py-2 rounded-full ${
-                selectedCategory === option ? "bg-[#00A85C]" : "bg-gray-700 hover:bg-gray-600"
+                selectedCategory === option ? "bg-[#00A67E]  hover:bg-violet-500 duration-200" : "bg-gray-700 hover:bg-gray-600"
               } text-white transition duration-200 w-full sm:w-auto`}
               onClick={() => setSelectedCategory(option)}
             >
@@ -66,7 +66,7 @@ const Rank = () => {
                   <span className="block text-lg font-semibold">{player.name}</span>
                   <span className="text-sm text-gray-400">${player.amountWon.toLocaleString()} won</span>
                 </div>
-                <span className="text-lg font-bold text-[#00A85C] ml-2 sm:ml-4">{player.wins} wins</span>
+                <span className="text-lg font-bold text-[#00A67E] ml-2 sm:ml-4">{player.wins} wins</span>
               </li>
             ))
           ) : (
