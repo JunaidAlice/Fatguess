@@ -29,24 +29,25 @@ const PredictionBanner = () => {
 
   return (
     <>
-      <div className=" px-10 md:px-32  flex items-center md:justify-evenly justify-center bg-[#1F1F1F] text-white p-16 w-full">
+      <div className="   flex items-center md:justify-between justify-center  bg-[#1F1F1F] text-white p-16 w-full">
         {/* Left Section */}
         <div className="flex flex-col ">
-          <h1 className="text-2xl md:text-4xl font-bold md:text-start text-center">
-            PREDICT LIKE A <span className="text-[#00A67E]">PRO</span>
-          </h1>
-          <p className="text-gray-400 text-sm mt-1 md:text-start text-center">
-            Choose Coin. Predict. Win. Repeat.
-          </p>
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight md:text-start text-center">
+  PREDICT LIKE A <span className="text-[#00A67E]">PRo</span>
+</h1>
+<p className="text-gray-300 text-base md:text-lg mt-2 md:text-start text-center f">
+  Choose Coin. Predict. Win. Repeat.
+</p>
+
 
           {/* Timer Box */}
           <div className="flex items-center bg-[#141415] p-3 rounded-lg mt-3">
-            <span className="text-xl mr-2 border p-2 rounded-md bg-[#00A67E]">
+            <span className="text-xl mr-2  p-2 rounded-md bg-[#00A67E]">
               <img src={clock} alt="" />
             </span>
             <div className="flex flex-col ">
-              <span className="text-sm text-center">Next Draw:</span>
-              <span className="ml-2 text-xl font-bold">{countdown}</span>
+              <span className="text-sm ml-2 text-gray-500 text-start">Next Draw:</span>
+              <span className="ml-2 text-4xl font-bold">{countdown}</span>
             </div>
           </div>
         </div>

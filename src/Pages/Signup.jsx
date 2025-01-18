@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 
-const Signup = ({ cross }) => {
+const Signup = ({ cross,close }) => {
+  const handleClick = () => {
+    cross();
+    close();
+  };
   return (
     <div className=" h-screen fixed top-0 bg-[#1f1f1f] w-full flex items-center justify-center p-2  z-50">
       <div className="bg-[#040404] relative rounded-xl p-8 sm:p-8 max-w-md w-full">
@@ -27,11 +31,14 @@ const Signup = ({ cross }) => {
         </div>
 
         <div className=" mb-4">
-          <Link to="/dashboard">
-            <button className="bg-[#00A67E] hover:bg-violet-500 duration-200  text-white rounded-md p-2 w-full">
+         <Link to="/dashboard">
+            <button onClick={
+            handleClick
+            
+            } className="bg-[#00A67E] hover:bg-violet-500 duration-200  text-white rounded-md p-2 w-full">
               Sign Up
             </button>
-          </Link>
+        </Link>
         </div>
 
         <p className="text-white text-center text-sm tracking-tighter">

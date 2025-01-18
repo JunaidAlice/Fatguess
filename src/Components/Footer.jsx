@@ -13,7 +13,7 @@ const Footer = () => {
       <footer className="footer px-4 md:px-10 border-t-8 border-t-[#00A67E] bg-[#1F1F1F] text-white">
         <div className="flex flex-col md:flex-row justify-between p-4">
           <img src={Logo} alt="Logo" className="mb-4 md:mb-0" />
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-gray-400">
             <a href="/how-it-works" className="footer-link">
               How it works
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div className="w-[80%] mx-auto border-[1px] rounded-full border-gray-700 my-4"></div>
         <div className="flex flex-col md:flex-row justify-between p-4">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap- mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap- mb-4 md:mb-0 text-gray-500">
             <p>&copy; 2023 FatGuess. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#">
@@ -53,7 +53,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <p className="text-center md:text-left">
+          <p className="text-center md:text-left text-gray-500">
             Predict responsibly and never pledge more than you can afford to
             lose.
           </p>

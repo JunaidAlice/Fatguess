@@ -43,23 +43,23 @@ const PredictionCard = ({ visible }) => {
 
   return (
     <>
-      <section className="fixed top-0 backdrop-blur-lg w-full flex justify-center items-center h-screen p-4">
-        <div className="bg-[#141414] text-white rounded-lg shadow-lg p-6 max-w-md w-full">
-          <h1 className="text-center text-2xl font-bold mb-4">
-            Next Draw: <span className="text-[#00A67E]">{timeLeft}</span>
+      <section className="fixed top-0 backdrop-blur-lg w-full flex bg-[#1f1f1f] justify-center items-center h-screen p-4">
+        <div className="bg-[#141414]  rounded-lg shadow-lg p-6 max-w-md w-full">
+          <h1 className="text-center text-4xl tracking-tighter font-extrabold mb-4 text-gray-200">
+            Next Draw: <span className="text-[#00A85C]">{timeLeft}</span>
           </h1>
           <div className="text-center text-lg font-medium mb-6">
-            <div className="w-44 flex justify-center items-center mx-auto">
+            <div className="w-44 flex justify-center items-center mx-auto gap-4">
               {" "}
               <img src={trophy} alt="" />
-              <h1>$94,978.19</h1>{" "}
+              <h1 className="text-gray-400 font-light">$94,978.19</h1>{" "}
             </div>
           </div>
 
           <div className="flex items-center mb-4">
             <img src={bitcoin} alt="Bitcoin" className="w-10 h-10 mr-4" />
             <div className="flex items-center justify-between  w-full">
-              <p className="text-xl font-semibold">Bitcoin (BTC)</p>
+              <p className="text-xl font-base text-gray-400 ">Bitcoin (BTC)</p>
               <p className="text-sm text-gray-400 font-bold">
                 Current price: $94,978.19
               </p>
@@ -70,7 +70,7 @@ const PredictionCard = ({ visible }) => {
             <div>
               <label
                 htmlFor="prediction"
-                className="block text-sm font-medium mb-1"
+                className="block text-sm font-medium mb-1 text-gray-200"
               >
                 My Prediction
               </label>
@@ -87,7 +87,7 @@ const PredictionCard = ({ visible }) => {
             <div>
               <label
                 htmlFor="pledge"
-                className="block text-sm font-medium mb-1"
+                className="block text-sm font-medium mb-1 text-gray-200"
               >
                 My Pledge
               </label>

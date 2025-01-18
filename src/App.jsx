@@ -29,6 +29,7 @@ const App = () => {
         <div className="">
           <MainContent />
         </div>
+        <Footer/>
       </div>
     </Router>
   );
@@ -47,13 +48,12 @@ const MainContent = () => {
         <Route path="/predictionboard" element={<Predictionboard />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        
 
         {/* Rank Routes (Previously Leaderboard) */}
         <Route path="/rank" element={<Rank />} />
         <Route path="/rank/:filter" element={<RankPage />} />
-        
-      </Routes><Footer/>
+     
+      </Routes>
     </div>
   );
 };

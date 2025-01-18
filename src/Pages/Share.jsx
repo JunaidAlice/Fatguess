@@ -25,37 +25,37 @@ const socialLinks = [
 export default function Share({ visible }) {
   if (!visible) return null;
   return (
-    <section className="fixed top-0 w-full backdrop-blur-lg  flex justify-center items-center h-screen">
-      <div className="bg-[#141414] text-white rounded-lg shadow-lg p-6 max-w-md w-full text-center">
+    <section className="fixed top-0 w-full  bg-[#1f1f1f]  flex justify-center items-center h-screen">
+      <div className="bg-[#141414] text-white rounded-l p-6 max-w-md w-full text-center">
         {/* Bitcoin Icon */}
         <div className="flex justify-center mb-4">
           <img src={CoinLogo} alt="Bitcoin" className="w-12 h-12" />
         </div>
 
         {/* Prediction Heading */}
-        <h1 className="text-2xl font-bold mb-2">
+        <h1 className="text-2xl text-gray-200 font-bold mb-2">
           Awesome Prediction <span>🎯</span>
         </h1>
-        <p className="text-sm text-gray-400 mb-6 font-bold">
+        <p className="text-sm text-gray-200 mb-6 font-bold">
           I predicted the bitcoin price will be
         </p>
 
         {/* Predicted Price */}
-        <p className="text-4xl font-bold text-[#00A67E] mb-2">
+        <p className="text-4xl font-bold text-[#00A85C] mb-2">
           {prediction.price}
         </p>
-        <p className="text-sm text-gray-400 mb-6">{prediction.date}</p>
-        <div className=" py-4 px-4 rounded-md bg-[#00A67E] hover:bg-violet-500 duration-200">
+        <p className="text-sm tracking-wider text-gray-200 mb-6">on {prediction.date}</p>
+        <div className=" py-3 px-4 rounded-md bg-[#00A85C] hover:bg-violet-500 duration-200">
           {/* Share Button */}
-          <button className=" text-white py-3 rounded font-semibold mb-4">
+          <button className=" text-gray-200  rounded mb-4">
             Share your prediction
           </button>
 
           {/* Social Media Icons using map() */}
-          <div className="flex justify-center space-x-4 text-2xl text-gray-400">
+          <div className="flex justify-center space-x-4  text-gray-400">
             {socialLinks.map((social, index) => (
               <a key={index} href={social.url} className="hover:text-white">
-                <img src={social.icon} alt="" />
+                <img src={social.icon} className=" size-5" alt="" />
               </a>
             ))}
           </div>
