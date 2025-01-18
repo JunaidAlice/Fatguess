@@ -16,6 +16,7 @@ import Dashboard from "./Components/Dashboard";
 import Predictionboard from "./Pages/Predictionboard";
 import LandingPage from "./Components/LandingPage";
 import Navbar from "./Components/Navbar";
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -46,11 +47,13 @@ const MainContent = () => {
         <Route path="/predictionboard" element={<Predictionboard />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
 
         {/* Rank Routes (Previously Leaderboard) */}
         <Route path="/rank" element={<Rank />} />
         <Route path="/rank/:filter" element={<RankPage />} />
-      </Routes>
+        
+      </Routes><Footer/>
     </div>
   );
 };

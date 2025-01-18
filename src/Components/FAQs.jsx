@@ -93,8 +93,8 @@ const FAQs = () => {
       question: "Do I Need to Pay Taxes on My Winnings?",
       answer1:
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      //   answer2:
-      //     "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
+        answer2:
+          "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
       answer3:
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
       answer4:
@@ -106,10 +106,10 @@ const FAQs = () => {
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
       answer2:
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      //   answer3:
-      //     " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      //   answer4:
-      //     " Winners: The top three closest predictions share the prize pool.",
+        answer3:
+          " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
+        answer4:
+          " Winners: The top three closest predictions share the prize pool.",
     },
   ];
 
@@ -119,9 +119,10 @@ const FAQs = () => {
         {/* Header Section */}
         <div>
           <div className="w-[80%] md:w-[95%] mx-auto max-w-4xl">
-            <h1 className="font-bold text-4xl">FAQs</h1>
+          <h1 className="font-extrabold tracking-tighter text-5xl md:text-6xl text-gray-100">FAQs</h1>
+
             <p
-              className="mt-2 text-white
+              className="mt-2 text-gray-400 text-lg
                 "
             >
               Dive into our FAQ to get all the juicy details and start flexing
@@ -133,9 +134,10 @@ const FAQs = () => {
           {/* Hero Image Section */}
           <div className="flex flex-col items-center mt-6">
             <img src={bull} alt="bull" className="w-40 md:w-52" />
-            <h1 className="text-3xl font-bold text-center mt-4">
-              PREDICT LIKE A <span className="text-[#00A67E]">PRO</span>
-            </h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter text-gray-200 text-center mt-4">
+  PREDICT LIKE A <span className="text-[#00A67E]">PRo</span>
+</h1>
+
           </div>
         </div>
 
@@ -154,7 +156,7 @@ const FAQs = () => {
                   className="faq-question flex justify-between  items-center cursor-pointer"
                   onClick={() => toggleAnswer(index)}
                 >
-                  <span className="text-lg font-semibold">{faq.question}</span>
+                  <span className="text-lg text-gray-200 font-semibold">{faq.question}</span>
                   <div className="">
                     {openIndex === index ? (
                       <IoIosArrowDropdown size={25}/>
@@ -164,7 +166,7 @@ const FAQs = () => {
                   </div>
                 </div>
                 {openIndex === index && (
-                  <div className="faq-answer mt-2 text-gray-200  clear-start font-semibold flex flex-col">
+                  <div className="faq-answer mt-2 text-gray-400  clear-start font-base flex flex-col">
                     {faq.answer1 && (
                       <p>
                         <span className="">.</span> {faq.answer1}

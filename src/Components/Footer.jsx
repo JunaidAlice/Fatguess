@@ -17,7 +17,7 @@ const Footer = () => {
             <a href="/how-it-works" className="footer-link">
               How it works
             </a>
-            <a href="/how-it-works" className="footer-link">
+            <a href="/raferal" className="footer-link">
               Referal
             </a>
             <a href="#faq" className="footer-link">
