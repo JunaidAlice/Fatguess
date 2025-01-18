@@ -29,7 +29,9 @@ const Rank = () => {
   return (
     <div className="bg-[#1A1A1A] min-h-screen flex justify-center items-center py-6">
       <div className="text-white p-6 rounded-lg w-full max-w-4xl">
-        <h2 className="text-3xl font-bold text-center mb-6">RANK</h2>
+      <h2 className="text-5xl font-extrabold tracking-tighter text-center mb-6">LEADERBOARD</h2>
+ 
+ 
 
         {/* Filter Buttons */}
         <div className="flex justify-center space-x-2 mb-6 flex-wrap gap-3">
@@ -63,10 +65,10 @@ const Rank = () => {
                   )}
                 </div>
                 <div className="flex-1 ml-4 text-center sm:text-left">
-                  <span className="block text-lg font-semibold">{player.name}</span>
-                  <span className="text-sm text-gray-400">${player.amountWon.toLocaleString()} won</span>
+                  <span className="block text-lg font-semibold text-gray-200">{player.name}</span>
                 </div>
-                <span className="text-lg font-bold text-[#00A67E] ml-2 sm:ml-4">{player.wins} wins</span>
+                  <h1 className="text-xl font-bold text-gray-300 ">${player.amountWon.toLocaleString()} <span className="text-sm font-light">won</span></h1>
+                <h1 className="text-xl font-bold text-gray-300 ml-2 sm:ml-4">{player.wins} <span className="text-sm font-light">wins</span> </h1>
               </li>
             ))
           ) : (

@@ -98,7 +98,8 @@ const ActivityFeed = () => {
   return (
     <div className="bg-[#1F1F1F] py-6">
       <div className="text-white p-4 md:p-6 w-full max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">ACTIVITY</h2>
+      <h2 className="text-5xl font-extrabold text-center tracking-tighter mb-6 uppercase">Acticity</h2>
+
         <div className="space-y-4">
           {activities.map((activity) => (
             <div
@@ -113,9 +114,9 @@ const ActivityFeed = () => {
                   className="w-10 h-10 rounded-full border-2 border-gray-600"
                 />
                 <span className="text-2xl">{activity.icon}</span>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center text-gray-50 gap-2 sm:gap-4">
                   <span className="font-bold text-lg">{activity.user}</span>
-                  <span className="font-semibold text-sm sm:text-base">
+                  <span className="font-normal text-sm sm:text-base">
                     Predicted {activity.amount} on {activity.pair}
                   </span>
                 </div>

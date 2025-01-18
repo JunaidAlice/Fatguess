@@ -126,7 +126,8 @@ const CommentsSection = () => {
   return (
     <div className="bg-[#1F1F1F] min-h-screen">
       <div className="md:max-w-3xl lg:max-w-4xl mx-auto p-4 text-white rounded-lg">
-        <h2 className="text-4xl text-center font-bold mb-4">Comments</h2>
+       <h2 className="text-5xl font-extrabold text-center mb-6 uppercase py-6">Comments</h2>
+
         <div className="bg-[#141415] px-4 rounded-md">
           <div className="mb-4 flex items-center space-x-2">
             <textarea

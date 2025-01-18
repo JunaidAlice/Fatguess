@@ -20,28 +20,34 @@ import { BiWallet } from "react-icons/bi";
 // Sample crypto data with CoinGecko IDs
 const cryptoData = [
   {
+    name: "TRON",
+    symbol: "TRX/USD",
+    image: "https://cryptologos.cc/logos/tron-trx-logo.png",
+    id: "tron",
+  },
+  {
     name: "Bitcoin",
-    symbol: "BTC",
+    symbol: "BTC/USD",
     image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
     id: "bitcoin",
   },
   {
-    name: "Ethereum",
-    symbol: "ETH",
-    image: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-    id: "ethereum",
+    name: "Dogecoin",
+    symbol: "DOGE/USD",
+    image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
+    id: "dogecoin",
   },
   {
-    name: "Solana",
-    symbol: "SOL",
-    image: "https://cryptologos.cc/logos/solana-sol-logo.png",
-    id: "solana",
+    name: "Binance Coin",
+    symbol: "BNB/USD",
+    image: "https://cryptologos.cc/logos/binance-coin-bnb-logo.png",
+    id: "binance-coin",
   },
   {
-    name: "Cardano",
-    symbol: "ADA",
-    image: "https://cryptologos.cc/logos/cardano-ada-logo.png",
-    id: "cardano",
+    name: "Chainlink",
+    symbol: "LINK/USD",
+    image: "https://cryptologos.cc/logos/chainlink-link-logo.png",
+    id: "chainlink",
   },
 ];
 
@@ -145,7 +151,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#141414] px-4 md:px-16 py-6">
+      <nav className="bg-[#141415] px-4 md:px-16 py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center  justify-start gap-[64px] flex-1">
             <img src={Logo} alt="Logo" />
@@ -187,9 +193,9 @@ export default function Navbar() {
                   </div>
                 ) : (
                   searchQuery && (
-                    <div className="absolute top-12 left-0 w-full  md:w-[65%] rounded-md text-white p-2 bg-[#040404]">
+                    <div className="absolute top-12 left-0 w-full  md:w-[65%] rounded-md text-gray-400 p-2 bg-[#040404]">
                       <img src={empty} alt="empty" className="w-14 mx-auto" />
-                      <p className="text-center">
+                      <p className="text-center ">
                         Sorry, coin not supported yet...
                       </p>
                     </div>
@@ -204,9 +210,9 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center  lg:w-[50%] justify-evenly  ">
               {navLinks.map((link) => (
                 <Link key={link.name} to={link.path}>
-                  <button className="flex flex-col items-center text-gray-400 hover:text-white">
+                  <button className="flex flex-col items-center text-gray-500 hover:text-white">
                     {link.icon}
-                    <span className=" lg:text-lg text-base mt-1 font-semibold ">
+                    <span className=" lg:text-lg text-base mt-1  font-semibold ">
                       {link.name}
                     </span>
                   </button>
