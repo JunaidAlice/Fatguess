@@ -80,16 +80,16 @@ const TERMS_DATA = [
 
 const TermsSection = ({ title, content }) => (
   <section className="mb-8">
-    <h2 className="text-2xl font-semibold text-white mb-4">{title}</h2>
-    <p className="whitespace-pre-line">{content}</p>
+    <h2 className="text-2xl font-semibold text-gray-200 mb-4">{title}</h2>
+    <p className="whitespace-pre-line font-light text-gray-400">{content}</p>
   </section>
 );
 
 const TermsOfService = () => {
   return (
-    <section className="bg-[#1F1F1F] text-gray-300 font-sans leading-relaxed">
+    <section className="bg-[#1F1F1F] text-gray-200  leading-relaxed">
       <div className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
+      <h2 className="md:text-6xl text-4xl font-black  text-center tracking-tighter mb-6 uppercase">trems of services</h2>
 
         {TERMS_DATA.map((section, index) => (
           <TermsSection

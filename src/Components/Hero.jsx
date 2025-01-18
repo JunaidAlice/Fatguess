@@ -4,7 +4,7 @@ import bull from "../assets/Hero/bull.svg";
 export default function Hero() {
   return (
     <section className="bg-[#1F1F1F]   px-10 ">
-      <div className="container px-2 md:px-16 py-16 lg:px-0 mx-auto  flex flex-col md:flex-row md:justify-between items-center text-center md:text-left">
+      <div className="container px-8 md:px-16 py-16 lg:px-0 mx-auto  flex flex-col md:flex-row md:justify-between items-center text-center md:text-left">
    {/* Left Content */}
 <div className="">
   <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-gray-100 mb-6 leading-tight">
