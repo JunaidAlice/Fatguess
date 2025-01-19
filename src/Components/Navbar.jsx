@@ -243,7 +243,7 @@ export default function Navbar() {
                           onClick={() => selectLanguage(language)}
                           className="flex items-center justify-between px-4 py-2 w-full hover:bg-gray-800"
                         >
-                          <div className="flex items-center space-x-2 border-b border-gray-600">
+                          <div className="flex items-center space-x-2 border-b w-full border-gray-600">
                             <img
                               src={language.flag}
                               alt={language.name}
