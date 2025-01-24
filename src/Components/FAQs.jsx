@@ -14,102 +14,52 @@ const FAQs = () => {
   const faqs = [
     {
       question: "How Does It Work?",
-      answer:[
+      answer:
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
       
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+       
+        
     },
     {
       question: "When Can I Predict?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
+      answer:
+        "Predictions can be made during the open window: 00:01:00 to 22:59:59 UTC (23 hour window)."
       
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "How Do I Make a Prediction?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+      answer:
+        "Connect your cryptocurrency wallet to the platform. Create a username that’s now linked to your wallet. Pick your coin, enter your predicted price, and confirm it. Your prediction is securely stored on the blockchain, so it can’t be tampered with."
     },
     {
       question: "What Cryptocurrencies Can I Use to Predict?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+      answer:
+        "You can use popular cryptocurrencies like USDT, BTC, ETH, BNB, and more.If you don’t have one of these, you can easily swap your tokens."
     },
     {
       question: "Is There a Minimum or Maximum Prediction Amount?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+      answer:"  The minimum prediction amount is $5. No maximum limit.",
     },
     {
       question: "How Often Can I Predict?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+      answer: "You can make predictions every day on multiple coins as often as you’d like."
+    },
+    {
+      question: "Do You Have a Referral Program?",
+      answer: "Yes! When you share your prediction badge on social media, you can earn rewards and invite others to join the fun."
     },
     {
       question: "Do You Have a Partner Program?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",]
+      answer:"Absolutely! FatGuess works with crypto exchanges, wallets, and other crypto-related platforms to create partnerships that benefit everyone."
     },
     {
       question: "Do I Need to Pay Taxes on My Winnings?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-        
-          "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      
-        " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      
-        " Winners: The top three closest predictions share the prize pool.",
-   ] },
+      answer:"That depends on where you live. You might need to declare your winnings as income. Please check your local tax laws and stay compliant. We also recommend reviewing our Terms and Conditions."
+    },
     {
       question: "Is FastBets a Lotto or Betting Platform?",
-      answer:[
-        " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      
-        "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-        
-          " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-        
-          " Winners: The top three closest predictions share the prize pool.",]
+      answer:
+        "No. FatGuess is a skill-based platform that rewards market knowledge and analytical skills. By using real-time data and trends, participants can make informed predictions. FatGuess is all about having fun while testing your market insights."
     },
   ];
 
@@ -167,9 +117,7 @@ const FAQs = () => {
                 </div>
                 {openIndex === index && (
                   <div className="faq-answer mt-2 text-gray-400  clear-start font-base flex flex-col">
-                    {faq.answer.map((answer, idx) => (
-                      <p key={idx}><span>.</span> {answer}</p>
-                    ))}
+                    <p>{faq.answer}</p>
                   </div>
                 )}
               </div>
