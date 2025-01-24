@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; 
 import bull from "../assets/Hero/bull.svg";
 import clock from "../assets/Dashboard/clock.svg";
 import CryptoGrid from "../Components/CryptoGrid";
+
 // Countdown Timer Hook
 const useCountdown = (initialTime) => {
   const [timeLeft, setTimeLeft] = useState(initialTime);
@@ -48,6 +49,7 @@ const PredictionBanner = () => {
             <div className="flex flex-col ">
               <span className="text-sm ml-2 text-gray-500 text-start">Next Draw:</span>
               <span className="ml-2 text-4xl font-bold">{countdown}</span>
+              <span className="text-xs ml-2 text-gray-500">(midnight UTC)</span>
             </div>
           </div>
         </div>

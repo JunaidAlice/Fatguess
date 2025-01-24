@@ -14,102 +14,102 @@ const FAQs = () => {
   const faqs = [
     {
       question: "How Does It Work?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "When Can I Predict?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "How Do I Make a Prediction?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "What Cryptocurrencies Can I Use to Predict?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "Is There a Minimum or Maximum Prediction Amount?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "How Often Can I Predict?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "Do You Have a Partner Program?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
-        " Winners: The top three closest predictions share the prize pool.",
+      
+        " Winners: The top three closest predictions share the prize pool.",]
     },
     {
       question: "Do I Need to Pay Taxes on My Winnings?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-        answer2:
+        
           "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-      answer3:
+      
         " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-      answer4:
+      
         " Winners: The top three closest predictions share the prize pool.",
-    },
+   ] },
     {
       question: "Is FastBets a Lotto or Betting Platform?",
-      answer1:
+      answer:[
         " FatGuess is a decentralized prediction platform where users forecast the price of a cryptocurrency 24 hours into the future.",
-      answer2:
+      
         "Prediction Window: Opens daily at 00:01:00 UTC and closes at 22:59:59 UTC.",
-        answer3:
+        
           " Price Determination: The final price is determined       at 00:00:00 UTC using real-time data from trusted blockchain oracles.",
-        answer4:
-          " Winners: The top three closest predictions share the prize pool.",
+        
+          " Winners: The top three closest predictions share the prize pool.",]
     },
   ];
 
@@ -167,26 +167,9 @@ const FAQs = () => {
                 </div>
                 {openIndex === index && (
                   <div className="faq-answer mt-2 text-gray-400  clear-start font-base flex flex-col">
-                    {faq.answer1 && (
-                      <p>
-                        <span className="">.</span> {faq.answer1}
-                      </p>
-                    )}
-                    {faq.answer2 && (
-                      <p>
-                        <span>.</span> {faq.answer2}
-                      </p>
-                    )}
-                    {faq.answer3 && (
-                      <p>
-                        <span>.</span> {faq.answer3}
-                      </p>
-                    )}
-                    {faq.answer4 && (
-                      <p>
-                        <span>.</span> {faq.answer4}
-                      </p>
-                    )}
+                    {faq.answer.map((answer, idx) => (
+                      <p key={idx}><span>.</span> {answer}</p>
+                    ))}
                   </div>
                 )}
               </div>
